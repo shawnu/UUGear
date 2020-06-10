@@ -84,7 +84,7 @@ void(* resetDevice) (void) = 0;
 
 void setup() {
   // if has no id yet, generate one
-  if (getID() == "") {
+  if (getID().startsWith(ID_PREFIX) == false) {
     generateID();
   }
 
